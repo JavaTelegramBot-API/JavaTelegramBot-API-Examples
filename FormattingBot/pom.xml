@@ -34,7 +34,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>pro.zackpollard.telegrambot.echobot.EchoBot</mainClass>
+                            <mainClass>pro.zackpollard.telegrambot.formattingbot.FormattingBot</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
