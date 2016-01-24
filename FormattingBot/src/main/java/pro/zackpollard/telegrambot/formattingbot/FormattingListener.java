@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
 public class FormattingListener implements Listener {
 
     private final TelegramBot telegramBot;
-    private final static Pattern pattern = Pattern.compile("(\\[[^\\(\\)\\[\\]]*\\]\\([^\\(\\)\\[\\]]*\\))|(\\*[^\\*]*\\*)|(\\_[^\\_]*\\_)|(\\`[^\\`]*\\`)");
+    private final static Pattern pattern = Pattern.compile("\\[[^\\(\\)\\[\\]]*\\]\\([^\\(\\)\\[\\]]*\\)|\\*[^\\*]*\\*|\\_[^\\_]*\\_|\\`[^\\`]*\\`");
 
     public FormattingListener(TelegramBot telegramBot) {
 
@@ -43,6 +43,9 @@ public class FormattingListener implements Listener {
         System.out.println(senderName + " - " + event.getQuery().getQuery());
 
         String queryText = event.getQuery().getQuery();
+
+        //Do nothing if the query text is empty.
+        if(queryText.isEmpty()) return;
 
         String newQueryText = queryText.replace("*", "*\\**")
                 .replace("_", "_\\__")
