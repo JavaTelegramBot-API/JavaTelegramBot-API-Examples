@@ -47,7 +47,7 @@ public enum Languages {
     NORWEGIAN("no", "Norwegian"),
     PERSIAN("fa", "Persian", "ir"),
     POLISH("pl", "Polish"),
-    PORTUGUESE("pt", "Portuguese"),
+    PORTUGUESE("pt", "Portuguese", "br"),
     ROMANIAN("ro", "Romanian"),
     RUSSIAN("ru", "Russian"),
     SERBIAN("sr", "Serbian"),

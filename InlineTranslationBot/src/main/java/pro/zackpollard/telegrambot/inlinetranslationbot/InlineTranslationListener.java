@@ -18,7 +18,7 @@ import java.util.List;
 public class InlineTranslationListener implements Listener {
 
     private final TelegramBot telegramBot;
-    private static Languages[] langs = new Languages[]{Languages.ENGLISH, Languages.DUTCH, Languages.GERMAN, Languages.ITALIAN, Languages.SPANISH, Languages.FRENCH, Languages.PERSIAN, Languages.ARABIC, Languages.CHINESE, Languages.JAPANESE, Languages.RUSSIAN};
+    private static Languages[] langs = new Languages[]{Languages.ENGLISH, Languages.DUTCH, Languages.GERMAN, Languages.ITALIAN, Languages.SPANISH, Languages.FRENCH, Languages.PERSIAN, Languages.PORTUGUESE, Languages.ARABIC, Languages.CHINESE, Languages.JAPANESE, Languages.RUSSIAN};
 
     public InlineTranslationListener(TelegramBot telegramBot) {
 
