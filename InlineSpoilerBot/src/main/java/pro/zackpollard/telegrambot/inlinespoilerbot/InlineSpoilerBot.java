@@ -35,7 +35,7 @@ public class InlineSpoilerBot {
         //This returns a logged in TelegramBot instance or null if the API key was invalid.
         telegramBot = TelegramBot.login(API_KEY);
         //This registers the SpoilerListener Listener to this bot.
-        initSkypeManager();
+        initSpoilerManager();
         telegramBot.getEventsManager().register(listener);
         //This method starts the retrieval of updates.
         //The boolean it accepts is to specify whether to retrieve messages
@@ -59,11 +59,11 @@ public class InlineSpoilerBot {
         return gson;
     }
 
-    public void initSkypeManager() {
+    public void initSpoilerManager() {
 
         if (saveLocation.exists()) {
 
-            listener = loadSkypeManager();
+            listener = loadSpoilerManager();
         } else {
 
             try {
@@ -84,7 +84,7 @@ public class InlineSpoilerBot {
         }
     }
 
-    private InlineSpoilerListener loadSkypeManager() {
+    private InlineSpoilerListener loadSpoilerManager() {
 
         InlineSpoilerListener loadedSaveFile;
 
